@@ -24,6 +24,23 @@ public:
     }
 };
 
+class Solution {
+public:
+    int countStudents(vector<int>& students, vector<int>& sandwiches) {
+        int arr[2]={0};
+        int n=students.size();
+        for(auto ele:students)
+            arr[ele]++;
+        for(int i=0;i<n;i++){
+            int x=sandwiches[i];
+            if(arr[x]==0)
+                return n-i;
+            arr[x]--;
+        }
+        return 0;
+    }
+};
+
 /*
 	The school cafeteria offers circular and square sandwiches at lunch break, referred to by numbers 0 and 1 respectively. All students stand in a queue. Each student either prefers square or circular sandwiches.
 	The number of sandwiches in the cafeteria is equal to the number of students. The sandwiches are placed in a stack. At each step:
