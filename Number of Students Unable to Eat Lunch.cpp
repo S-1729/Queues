@@ -24,6 +24,7 @@ public:
     }
 };
 
+//Code-2 S.C : O(1)
 class Solution {
 public:
     int countStudents(vector<int>& students, vector<int>& sandwiches) {
